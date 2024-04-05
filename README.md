@@ -1,2 +1,2 @@
 # curso_angular
-hola perras
+este es el github de los proyectos del curso de angular de coursera de Rafael Alvarez
