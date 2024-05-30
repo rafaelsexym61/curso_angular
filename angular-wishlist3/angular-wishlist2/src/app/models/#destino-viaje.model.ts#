@@ -1,0 +1,8 @@
+export class DestinoViaje{
+	public arna:String;	
+        
+	constructor(public nombre:string, public url:string){
+	 ara	
+	}
+}
+1±

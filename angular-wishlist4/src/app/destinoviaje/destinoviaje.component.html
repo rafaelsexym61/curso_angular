@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<div class="card-content">
+	<div class="card-img">
+		<img src="https://placeimg.com/380/230/nature" alt="">
+		<span><h4>{{position}}</h4></span>
+	</div>
+	<div class="card-desc">
+		<h3>{{destino.nombre}}</h3>
+		<p>servicios</p>
+		<ul>
+			<li *ngFor="let s of destino.servicios">
+				<span [ngSwitch]="s">
+					<i *ngSwitchCase="'desayuno'" style="color: red;">{{s}}</i>
+					<i *ngSwitchDefault>{{s}}</i>
+				</span>
+			</li>
+		</ul>
+		<div>
+			<a href="#">
+				<i class="glyphicon glyphicon-thumbs-up" style="font-size: 4em;" (click)="voteUp()" ></i>
+				</a>
+				<br>
+			<a  href="#"><i class="glyphicon glyphicon-thumbs-down" style="font-size: 4em" (click)="voteDown()"></i></a>
+			
+				<span>{{destino.votes}}</span>
+		</div>
+		<div>
+			<br>
+		</div>
+<div>
+	<a href="#" class="btn-card" (click)="ir()">Ir!</a>
+	<span *ngIf="destino.isSelected()">
+		<span ngNonBindable>-PREFERIDO-</span>
+	</span>
+	<a [routerLink]="['/destino']">Ver detalle</a>
+</div>
+
+</div>
+</div>

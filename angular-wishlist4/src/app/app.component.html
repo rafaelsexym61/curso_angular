@@ -1,0 +1,33 @@
+
+	<div class= "page-header">
+		<div class="container">
+			<h1>ruteo somple</h1>
+			<div class="navlinks">
+				<a [routerLink]="['/home']">Home </a>
+				<a [routerLink]="['/destino']">Destino</a>
+			</div>
+		</div>
+	</div>
+
+
+<div class="container content">
+	<div class="row">
+		<h1>
+			{{title}}
+		</h1>
+	</div>
+	
+	
+	
+	<router-outlet>
+	
+	</router-outlet>
+	
+</div>
+
+<hr class="mb-5">
+<div>
+	<!--<h2 *ngIf="(time | async)"></h2>-->
+<!--Fecha: {{ time | async }} -->
+</div>
+

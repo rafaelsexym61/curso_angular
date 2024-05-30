@@ -1,0 +1,10 @@
+<p>listalugares works!</p>
+
+<ul id="UnList">
+    <!--<li *ngFor="let l of lugares;">{{l}}</li> -->
+	<!--<li><h3>{{ lugares }}</h3></li>-->
+    <div *ngFor='let lugar of lugares | async'>
+        {{lugar.name}}
+    </div>
+
+</ul>
